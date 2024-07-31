@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyPortfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    nav ul li a:hover {
+      color: #ff6347;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px 20px;
+      margin: 20px 0;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #about {
+      text-align: center;
+    }
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    #about h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2em;
+      color: #666;
+    }
+    #skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .skill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 150px;
+      transition: transform 0.2s;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+    }
+    .skill img {
+      width: 50px;
+      vertical-align: middle;
+    }
+    .skill span {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    .project, .recommendation {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: box-shadow 0.2s;
+    }
+    .project:hover, .recommendation:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .project h2, .recommendation h2 {
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+    .project p, .recommendation blockquote {
+      color: #666;
+    }
+    .recommendation cite {
+      display: block;
+      margin-top: 10px;
+      text-align: right;
+      font-style: normal;
+      color: #999;
+    }
+    form {
+      margin-top: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    form label, form textarea, form input, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    form textarea, form input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 10px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    form button:hover {
+      background-color: #ff6347;
+    }
+    .home-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4a90e2;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: background-color 0.2s;
+    }
+    .home-icon:hover {
+      background-color: #ff6347;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+      border-top: 4px solid #4a90e2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chinta Madhu</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <img src="My_Pic.jpeg" alt="Profile Image">
+    <h1>Chinta Madhu</h1>
+    <p>I am Madhu, a FullStack Web Developer passionate about integrating Machine Learning 
+      features into web development. I specialize in the MERN stack and am enthusiastic 
+      about Machine Learning. I am proficient in Python, Java and C. Currently, I am learning Databricks.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <img src="python.jpg" alt="Skill Logo">
+      <span>Python</span>
+    </div>
+    <div class="skill">
+      <img src="java.png" alt="Skill Logo">
+      <span>Java</span>
+    </div>
+    <div class="skill">
+      <img src="C.png" alt="Skill Logo">
+      <span>C</span>
+    </div>
+    <div class="skill">
+      <img src="HTML.png" alt="Skill Logo">
+      <span>HTML</span>
+    </div>
+    <div class="skill">
+      <img src="css3.png" alt="Skill Logo">
+      <span>CSS</span>
+    </div>
+    <div class="skill">
+      <img src="js.png" alt="Skill Logo">
+      <span>Javascript</span>
+    </div>
+    <div class="skill">
+      <img src="react.png" alt="Skill Logo">
+      <span>React</span>
+    </div>
+    <div class="skill">
+      <img src="nodejs.png" alt="Skill Logo">
+      <span>NodeJs</span>
+    </div>
+    <div class="skill">
+      <img src="MySql.png" alt="Skill Logo">
+      <span>MySql</span>
+    </div>
+    <div class="skill">
+      <img src="MongoDB.png" alt="Skill Logo">
+      <span>MongoDB</span>
+    </div>
+    <div class="skill">
+      <img src="aws.png" alt="Skill Logo">
+      <span>AWS Cloud</span>
+    </div>
+    <div class="skill">
+      <img src="Snowflake.png" alt="Skill Logo">
+      <span>Snowflake</span>
+    </div>
+    <div class="skill">
+      <img src="ML.png" alt="Skill Logo">
+      <span>Machine Learning</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h2>State Canvas</h2>
+      <p>I, along with my teammates, built a web application named "State Canvas" using the MERN stack. This application is designed for travelers and tourists who seek details about various locations in India. My role involved developing the frontend using HTML, CSS, and JavaScript, and I also acted as the team lead.</p>
+    </div>
+    <div class="project">
+      <h2>Data Transfer to Snowflake using AWS</h2>
+      <p>Integrated external data into Snowflake using AWS S3 and IAM. Set up a Snowflake storage integration and utilized Stages to manage data transfer. Handled CSV, PARQUET, and JSON files for loading and unloading.</p>
+    </div>
+    <div class="project">
+      <h2>Twitter Sentiment Analysis</h2>
+      <p>I worked on an ML project called "Twitter Sentiment Analysis," which uses Machine Learning algorithms and NLP to predict people's sentiments based on their tweets. We collected raw data (tweets) from Twitter (now "X") on specific topics and applied ML algorithms to build a predictive model.</p>
+    </div>
+  </section>
+
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="recommendation">
+      <blockquote>"Madhu is a dedicated and talented developer with a strong passion for learning new technologies. His contributions to the team were invaluable."</blockquote>
+      <cite>- Author 1</cite>
+    </div>
+    <div class="recommendation">
+      <blockquote>"Madhu's expertise in the MERN stack and his leadership skills were instrumental in the success of our project."</blockquote>
+      <cite>- Author 2</cite>
+    </div>
+    <div class="recommendation">
+      <blockquote>"Madhu consistently demonstrates a deep understanding of complex concepts and is always willing to help his peers."</blockquote>
+      <cite>- Author 3</cite>
+    </div>
+  </section>
+
+  <section id="new-recommendation">
+    <h2>Add a Recommendation</h2>
+    <form id="recommendation-form">
+      <label for="recommendation">Recommendation:</label>
+      <textarea id="recommendation" name="recommendation" required></textarea>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+      <button type="submit">Add Recommendation</button>
+    </form>
+  </section>
+
+  <a href="#home" class="home-icon"><i class="fas fa-home"></i></a>
+
+  <script>
+    document.getElementById('recommendation-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const recommendation = document.getElementById('recommendation').value;
+      const author = document.getElementById('author').value;
+
+      const newRecommendation = document.createElement('div');
+      newRecommendation.classList.add('recommendation');
+      newRecommendation.innerHTML = `<blockquote>"${recommendation}"</blockquote><cite>- ${author}</cite>`;
+
+      document.getElementById('recommendations').appendChild(newRecommendation);
+      
+      alert('Recommendation added successfully!');
+      document.getElementById('recommendation-form').reset();
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2024 Madhu Chinta. All rights reserved.</p>
+  </footer>
+</body>
+</html>
